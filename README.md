@@ -2,9 +2,10 @@
 
 Contains Solution for the leet code problems
 
-Python folder contains solution in Python Language
 
-C/C++ folder contains solution in C or C++ Language
+1. Python folder contains solution in Python Language
 
-Java folder contains solution in Java Language
+2. C/C++ folder contains solution in C or C++ Language
+
+3. Java folder contains solution in Java Language
 
