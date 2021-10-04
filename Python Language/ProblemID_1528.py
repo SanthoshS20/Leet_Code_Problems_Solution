@@ -16,6 +16,8 @@ Return the shuffled string.
 # Time Complexity   Space Complexity
 #   O(len(s))           O(1)
 
+# Either import List like below or use ( list ).
+from typing import List
 
 class Solution:
     def restoreString(self, s: str, indices: List[int]) -> str:
