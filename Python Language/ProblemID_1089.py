@@ -17,10 +17,10 @@ Do the above modifications to the input array in place, do not return anything f
 #        O(N)              O(1)
 
 # Either import List like below or use ( list ).
-from typing import List
+# from typing import List
 
 class Solution:
-    def duplicateZeros(self, arr: List[int]) -> None:
+    def duplicateZeros(self, arr: list[int]) -> None:
         i=0
         while(i < (len(arr))):
             if(arr[i]==0):
