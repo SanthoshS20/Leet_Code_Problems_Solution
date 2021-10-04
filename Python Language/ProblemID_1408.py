@@ -16,6 +16,8 @@ String words[i] is substring of words[j], if can be obtained removing some chara
 #       O(N^2)            O(N)
 
 
+# Either import List like below or use ( list ).
+from typing import List
 
 class Solution:
     def stringMatching(self, words: List[str]) -> List[str]:
