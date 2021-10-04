@@ -18,7 +18,7 @@ jobs:
     ## to execute on different Python versions 
     runs-on: ubuntu-latest
     env: 
-      PYTHON_SCRIPT_PATH: "https://github.com/ayoub-berdeddouch/Leet_Code_Problems_Solution/tree/main/Python%20Language/"
+      PYTHON_SCRIPT_PATH: "/home/runner/work/Leet_Code_Problems_Solution/Leet_Code_Problems_Solution/Python%20Language/"
     strategy:
       matrix:
         python-version: [ 3.8, 3.9]
