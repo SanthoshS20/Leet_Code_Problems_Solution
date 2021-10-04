@@ -18,10 +18,10 @@ jobs:
     ## to execute on different Python versions 
     runs-on: ubuntu-latest
     env: 
-      PYTHON_SCRIPT_PATH: "Python Language/"
+      PYTHON_SCRIPT_PATH: "/ayoub-berdeddouch/Leet_Code_Problems_Solution/tree/main/Python%20Language"
     strategy:
       matrix:
-        python-version: [ 3.5, 3.6, 3.7, 3.8, 3.9]
+        python-version: [ 3.8, 3.9]
     name: Python ${{ matrix.python-version }} sample
     ## Define a sequence of steps to be executed
     steps:
@@ -45,7 +45,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flake8 pytest
+          pip install pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       #- name: Lint with flake8
       #  run: |
