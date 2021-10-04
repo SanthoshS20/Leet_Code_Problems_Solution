@@ -11,6 +11,8 @@ Given an integer array sorted in non-decreasing order, there is exactly one inte
 #     Time Complexity     Space Complexity
 #          O(N)               O(N)
 
+# Either import List like below or use ( list ).
+from typing import List
 
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
