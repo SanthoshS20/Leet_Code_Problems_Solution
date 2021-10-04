@@ -11,6 +11,8 @@ Given an array of integers arr, write a function that returns true if and only i
 # Time Complexity  Space Complexity
 #     O(n)            O(n)
 
+# Either import List like below or use ( list ).
+from typing import List
 
 class Solution:
     def uniqueOccurrences(self, arr: List[int]) -> bool:
