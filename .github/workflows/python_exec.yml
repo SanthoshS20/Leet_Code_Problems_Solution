@@ -21,8 +21,8 @@ jobs:
     ## In this case, the job on Ubuntu. Additionally, set a the job
     ## to execute on different Python versions 
     runs-on: ubuntu-latest
-    #env: 
-    #  PYTHON_SCRIPT_PATH: "/home/runner/work/Leet_Code_Problems_Solution/Leet_Code_Problems_Solution/Python%20Language/"
+    env: 
+      PYTHON_SCRIPT_PATH: "/home/runner/work/Leet_Code_Problems_Solution/Python\ Language"
     strategy:
       matrix:
         python-version: [ 3.8, 3.9]
@@ -59,6 +59,6 @@ jobs:
       #    flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          pytest
-        working-directory: ./Python\ Language
+          pytest ${PYTHON_SCRIPT_PATH}/
+          python ${PYTHON_SCRIPT_PATH}/*.py
       
