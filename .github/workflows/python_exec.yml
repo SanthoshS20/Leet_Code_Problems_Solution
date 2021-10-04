@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [  2.7, '2.x', '3.x',3.5, 3.6, 3.7, 3.8, 'pypy-2.7', 'pypy-3.6', 'pypy-3.7']
+        python-version: [ 2.7,3.5, 3.6, 3.7, 3.8]
     name: Python ${{ matrix.python-version }} sample
     ## Define a sequence of steps to be executed
     steps:
@@ -32,11 +32,15 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
+      - run: python *.py
       ## Install all necessary dependecies .
       ## For example, pytest and any defined packages within the requirements.txt file if there is one.
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install  pytest 
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
-      - run: python *.py
+          ## pip install  pytest 
+          ## if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      
