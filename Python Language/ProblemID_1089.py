@@ -16,6 +16,7 @@ Do the above modifications to the input array in place, do not return anything f
 #   Time Complexity   Space Complexity
 #        O(N)              O(1)
 
+# Either import List like below or use ( list ).
 from typing import List
 
 class Solution:
