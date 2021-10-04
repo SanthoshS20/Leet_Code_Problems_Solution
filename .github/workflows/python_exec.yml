@@ -37,7 +37,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - run: python Python Language/*.py
+      #- run: python Python Language/*.py
       ## Install all necessary dependecies .
       ## For example, pytest and any defined packages within the requirements.txt file if there is one.
       - name: Install dependencies
