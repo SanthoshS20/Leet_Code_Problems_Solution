@@ -17,9 +17,11 @@ jobs:
     ## In this case, the job on Ubuntu. Additionally, set a the job
     ## to execute on different Python versions 
     runs-on: ubuntu-latest
+    env: 
+      PYTHON_SCRIPT_PATH: "Python Language/"
     strategy:
       matrix:
-        python-version: [ 2.7,3.5, 3.6, 3.7, 3.8]
+        python-version: [ 3.5, 3.6, 3.7, 3.8, 3.9]
     name: Python ${{ matrix.python-version }} sample
     ## Define a sequence of steps to be executed
     steps:
@@ -53,5 +55,5 @@ jobs:
       #    flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          pytest
+          pytest ${PYTHON_SCRIPT_PATH}
       
