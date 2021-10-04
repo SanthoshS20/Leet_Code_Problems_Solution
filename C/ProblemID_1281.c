@@ -1,3 +1,12 @@
+/*
+Link -   https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
+Problem Description : 
+Given an integer number n, return the difference between the product of its digits and the sum of its digits.
+*/
+
+//     Time Complexity     Space Complexity
+//        O(log n)              O(1)
+
 #include<stdio.h>
 int subtractProductAndSum(int n);
 void main()
