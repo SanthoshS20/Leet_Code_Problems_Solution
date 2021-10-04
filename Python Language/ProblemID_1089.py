@@ -16,7 +16,7 @@ Do the above modifications to the input array in place, do not return anything f
 #   Time Complexity   Space Complexity
 #        O(N)              O(1)
 
-
+from typing import List
 
 class Solution:
     def duplicateZeros(self, arr: List[int]) -> None:
