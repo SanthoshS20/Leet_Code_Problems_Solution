@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
-      - run: python *.py
+      - run: python Python Language/*.py
       ## Install all necessary dependecies .
       ## For example, pytest and any defined packages within the requirements.txt file if there is one.
       - name: Install dependencies
