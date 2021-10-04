@@ -6,8 +6,12 @@ name: python_exec
 ## or when a new commit is pushed to the repository
 on:
   push:
+    paths:
+      - '**.py'
     branches: [ main ]
   pull_request:
+    paths:
+      - '**.py'
     branches: [ main ]
 ## List the steps to be executed by the workflow
 jobs:
@@ -17,8 +21,8 @@ jobs:
     ## In this case, the job on Ubuntu. Additionally, set a the job
     ## to execute on different Python versions 
     runs-on: ubuntu-latest
-    env: 
-      PYTHON_SCRIPT_PATH: "/home/runner/work/Leet_Code_Problems_Solution/Leet_Code_Problems_Solution/Python%20Language/"
+    #env: 
+    #  PYTHON_SCRIPT_PATH: "/home/runner/work/Leet_Code_Problems_Solution/Leet_Code_Problems_Solution/Python%20Language/"
     strategy:
       matrix:
         python-version: [ 3.8, 3.9]
@@ -55,5 +59,5 @@ jobs:
       #    flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          pytest ${PYTHON_SCRIPT_PATH}
+          pytest
       
