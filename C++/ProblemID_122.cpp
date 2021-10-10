@@ -15,6 +15,12 @@ Time Complexity    Space Complexity
 
 */
 
+#include <iostream>
+#include <climits>
+#include <vector>
+
+using namespace std;
+
 class Solution
 {
 public:
@@ -30,3 +36,11 @@ public:
     return res;
   }
 };
+
+int main()
+{
+  vector<int> prices = {7, 1, 5, 3, 6, 4};
+  Solution solution;
+  cout << solution.maxProfit(prices) << '\n';
+  return 0;
+}
