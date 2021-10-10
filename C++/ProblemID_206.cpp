@@ -11,16 +11,50 @@ Time Complexity    Space Complexity
 
 */
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// Definition for singly-linked list.
+struct ListNode
+{
+  int val;
+  ListNode *next;
+  ListNode() : val(0), next(nullptr) {}
+  ListNode(int x) : val(x), next(nullptr) {}
+  ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+ListNode *pushNode(ListNode *head, int data)
+{
+  ListNode *node = new ListNode(data);
+  if (head == NULL)
+  {
+    head = node;
+    return head;
+  }
+
+  ListNode *temp = head;
+
+  // Add node to end of Linked List
+  while (temp->next != NULL)
+    temp = temp->next;
+  temp->next = node;
+  return head;
+}
+
+void printList(ListNode *head)
+{
+  ListNode *temp = head;
+  while (temp != NULL)
+  {
+    cout << temp->val << " ";
+    temp = temp->next;
+  }
+  cout << "\n";
+}
+
 class Solution
 {
 public:
@@ -46,3 +80,23 @@ public:
     return Head;
   }
 };
+
+int main()
+{
+  vector<int> v = {1, 2, 3, 4, 5};
+  ListNode *head = NULL;
+
+  // Add elements in Linked List
+  for (auto &i : v)
+    head = pushNode(head, i);
+
+  // Print original Linked List
+  printList(head);
+
+  Solution solution;
+  head = solution.reverseList(head);
+
+  // Print reversed Linked List
+  printList(head);
+  return 0;
+}
