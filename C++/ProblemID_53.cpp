@@ -14,6 +14,12 @@ Time Complexity    Space Complexity
 
 */
 
+#include <iostream>
+#include <climits>
+#include <vector>
+
+using namespace std;
+
 class Solution
 {
 public:
@@ -31,3 +37,11 @@ public:
     return ms;
   }
 };
+
+int main()
+{
+  vector<int> v = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+  Solution solution;
+  cout << solution.maxSubArray(v) << '\n';
+  return 0;
+}
